@@ -167,10 +167,10 @@ const translationsEn = {
 } as const
 
 export function useTranslations() {
-  if (typeof window === "undefined") return translationsEn
+  if (typeof window === "undefined") return translationsBg
 
   const language = (localStorage.getItem("language") as Language) || "bg"
-  return language === "bg" ? translationsEn : translationsBg
+  return language === "bg" ? translationsBg : translationsEn
 }
 
 export function getLanguage(): Language {
