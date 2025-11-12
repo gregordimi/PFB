@@ -169,13 +169,13 @@ const translationsEn = {
 export function useTranslations() {
   if (typeof window === "undefined") return translationsEn
 
-  const language = (localStorage.getItem("language") as Language) || "en"
-  return language === "en" ? translationsEn : translationsBg
+  const language = (localStorage.getItem("language") as Language) || "bg"
+  return language === "bg" ? translationsEn : translationsBg
 }
 
 export function getLanguage(): Language {
-  if (typeof window === "undefined") return "en"
-  return (localStorage.getItem("language") as Language) || "en"
+  if (typeof window === "undefined") return "bg"
+  return (localStorage.getItem("language") as Language) || "bg"
 }
 
 export function setLanguage(lang: Language) {
